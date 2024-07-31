@@ -23,10 +23,6 @@ Shop-Sync-App is a comprehensive inventory management system designed to help bu
 - Expose RESTful APIs to manage inventory and categories, enabling integration with other systems.
 - Securely handle CRUD operations (Create, Read, Update, Delete) on items and categories.
 
-### User Interface
-- User-friendly interface built with modern web technologies for a smooth and intuitive user experience.
-- Responsive design to ensure usability across different devices and screen sizes.
-
 ## Technology Stack
 - **Backend:** Spring Boot framework providing a robust and scalable backend.
 - **Database:** MySql for reliable and efficient data storage.
