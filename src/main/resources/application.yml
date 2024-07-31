@@ -1,0 +1,44 @@
+# Configuration for the 'default' profile
+# application.yml
+# CREATED BY KTARTIR on 07/27/2024
+spring:
+  profiles:
+    active: local
+
+  datasource:
+    url: jdbc:mysql://10.100.100.166:3306/ktartir?useSSL=false&allowPublicKeyRetrieval=true
+    username: esense
+    password: eS3ns3Yous3rP@ss
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      minimumIdle: 10
+      maximumPoolSize: 100
+      connectionTimeout: 20000
+      validationTimeout: 5000
+      idleTimeout: 600000
+      maxLifetime: 1800000
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+    show-sql: true
+    defer-datasource-initialization: true
+
+server:
+  port: 5551
+  servlet:
+    context-path: /api
+  compression:
+    enabled: true
+    min-response-size: 2048
+  error:
+    include-exception: false
+
+application:
+  version: 1.0.0
+  tenant-id: 3e3fa919-1384-4a14-928c-16090a50e87e
